@@ -3,15 +3,160 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mucip ASLAN</title>
+  <title>CSS Temel Ödevi</title>
+  <style>
+    /* Sayfa genel ayarları */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ece9ee;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .container {
+      width: 85%;
+      margin: 25px auto;
+      background-color: #f8f8fb;
+      border: 1px solid #d4d4d8;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Grup seçici */
+    h1, h2, p {
+      margin-top: 0;
+    }
+
+    /* Üst menü */
+    nav {
+      background-color: #f3f3f7;
+      padding: 18px 25px;
+      border-bottom: 2px solid #c9d7f0;
+    }
+
+    .logo {
+      display: inline-block;
+      font-size: 22px;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      float: right;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-left: 12px;
+    }
+
+    /* Hiyerarşik seçici 1 */
+    nav ul li a {
+      display: inline-block;
+      text-decoration: none;
+      color: #333;
+      padding: 10px 16px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    /* Hiyerarşik seçici 2 */
+    nav ul li a:hover {
+      background-color: #7da0d8;
+      color: white;
+    }
+
+    .active {
+      background-color: #7da0d8;
+      color: white;
+    }
+
+    /* Header alanı */
+    header {
+      padding: 35px 25px 25px 25px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header h1 {
+      font-size: 26px;
+      color: #2f2f38;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #505a73;
+      line-height: 1.7;
+      text-align: left;
+    }
+
+    /* İçerik alanı */
+    main {
+      padding: 30px 25px;
+    }
+
+    .box {
+      display: inline-block;
+      width: 47%;
+      vertical-align: top;
+      min-height: 320px;
+      border: 1px solid #d8d8d8;
+      border-radius: 8px;
+      margin-right: 2%;
+      box-sizing: border-box;
+    }
+
+    .box:last-child {
+      margin-right: 0;
+    }
+
+    .content-box {
+      background-color: #f5ecd5;
+      border-color: #dfcc9d;
+    }
+
+    .side-box {
+      background-color: #e4eef5;
+      border-color: #bdd0dc;
+    }
+
+    .box h2 {
+      font-size: 22px;
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      color: #2f2f38;
+    }
+
+    /* Hiyerarşik seçici 3 */
+    .box p {
+      font-size: 17px;
+      color: #4a4a4a;
+      line-height: 1.8;
+      text-align: justify;
+      padding: 0 20px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px;
+      background-color: #f1f1f5;
+      border-top: 1px solid #ddd;
+      font-size: 15px;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <h1>Mucip ASLAN</h1>
-    <p>Bilgisayar Mühendisliği | Web Programlama Öğrencisi</p>
-
+  <div class="container">
     <nav>
+      <div class="logo">CSS Temel Ödevi</div>
       <ul>
         <li><a href="index.html">Ana Sayfa</a></li>
         <li><a href="about.html">Hakkımda</a></li>
@@ -19,55 +164,45 @@
         <li><a href="contact.html">İletişim</a></li>
       </ul>
     </nav>
-  </header>
 
-  <main>
-    <section>
-      <h2>Hoş Geldiniz</h2>
+    <header>
+      <h1>Basit Web Sayfası Düzeni</h1>
       <p>
-        Bu web sitesi, Web Programlama dersi kapsamında hazırlanmış <strong>örnek bir kişisel tanıtım sayfasıdır</strong>.
+        Bu çalışmada CSS’in temel özellikleri uygulanmaktadır. Menü yapısı, kutu düzeni,
+        metin biçimlendirme, margin, padding, border ve selector kullanımları örneklenmiştir.
+      </p>
+    </header>
+
+    <main>
+      <section class="box content-box">
+        <h2>Hoş Geldiniz</h2>
+        <p>
+          Bu web sitesi, Web Programlama dersi kapsamında hazırlanmış <strong>örnek bir kişisel tanıtım sayfasıdır</strong>.
         Amaç, HTML'in temel etiketlerini ve sayfa yapısını öğrenmektir.
-      </p>
-      <p>
-        Daha fazla bilgi için <em>Hakkımda</em> sayfasını ziyaret edebilirsiniz.
-      </p>
-    </section>
+        </p>
+      </section>
 
-    <section>
-      <h2>Hızlı Bilgiler</h2>
-      <ul>
-        <li>Üniversite: Marmara Üniversitesi</li>
-        <li>Bölüm: Bilgisayar Mühendisliği</li>
-        <li>İlgi Alanlarıı: Yapay zeka, bilgisayarlı görü, makine öğrenmesi</li>
-      </ul>
-    </section>
+      <aside class="box side-box">
+        <h2>Öğrenme Hedeflerim</h2>
+        <p>
+          <ol>
+            <li>Görüntü işleme</li>
+            <li>Model Eğitimi</li>
+            <li>Modelin testi</li>
+            <li>Modelin optimizasyonu</li>
+          </ol>
+        </p>
+        <p>
+          Bu kapsamda kendi projelerimde bu teknikleri uygulayarak daha iyi sonuçlar elde etmeyi
+          hedefliyorum.
+        </p>
+      </aside>
+    </main>
 
-    <section>
-      <h2>Öğrenme Hedeflerim</h2>
-      <ol>
-        <li>Görüntü işleme öğrenmej</li>
-        <li>Model Eğitmek</li>
-        <li>Modelin testi</li>
-        <li>Modelin optimizasyonu</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>Faydalı Bağlantılar</h2>
-      <p>Aşağıdaki kaynaklar web geliştirme öğrenirken faydalı olabilir:</p>
-      <ul>
-        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
-        <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
-        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
-      </ul>
-    </section>
-
-    <hr />
-  </main>
-
-  <footer>
-    <p>© 2026 Mucip ASLAN | Web Programlama Dersi</p>
-  </footer>
+    <footer>
+      © 2026 CSS Temel Örnek. Bu sayfa basit bir HTML + CSS alıştırmasıdır.
+    </footer>
+  </div>
 
 </body>
 </html>
