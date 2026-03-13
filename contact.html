@@ -4,52 +4,245 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>İletişim</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ece9ee;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .container {
+      width: 85%;
+      margin: 25px auto;
+      background-color: #f8f8fb;
+      border: 1px solid #d4d4d8;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    header {
+      padding: 30px 25px 20px 25px;
+      border-bottom: 1px solid #ddd;
+      background-color: #f3f3f7;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #2f2f38;
+    }
+
+    header p {
+      font-size: 17px;
+      color: #505a73;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      display: inline-block;
+      text-decoration: none;
+      color: #333;
+      padding: 10px 16px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #7da0d8;
+      color: white;
+    }
+
+    .active {
+      background-color: #7da0d8;
+      color: white;
+    }
+
+    main {
+      padding: 30px 25px;
+    }
+
+    main section {
+      margin-bottom: 35px;
+    }
+
+    section h2 {
+      font-size: 24px;
+      color: #2f2f38;
+      margin-bottom: 15px;
+    }
+
+    section ul {
+      padding-left: 20px;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    section p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #4a4a4a;
+      text-align: left;
+    }
+
+    .contact-container {
+      width: 70%;
+      margin: 35px auto;
+      padding: 25px;
+      background-color: #f9f9fc;
+      border: 1px solid #d4d4d8;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    .contact-container h2 {
+      text-align: center;
+      color: #2f2f38;
+      margin-bottom: 25px;
+    }
+
+    .contact-container label {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .contact-container input,
+    .contact-container select,
+    .contact-container textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #cfcfd4;
+      border-radius: 6px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .contact-container input[type="submit"] {
+      background-color: #1e7df2;
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .contact-container input[type="submit"]:hover {
+      background-color: #1669cb;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      color: #1e7df2;
+      font-weight: bold;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px;
+      background-color: #f1f1f5;
+      border-top: 1px solid #ddd;
+      font-size: 15px;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <h1>İletişim</h1>
-    <p>Benimle iletişime geçebileceğiniz bilgiler</p>
+  <div class="container">
+    <header>
+      <h1>İletişim</h1>
+      <p>Benimle iletişime geçebileceğiniz bilgiler ve iletişim formu aşağıda yer almaktadır.</p>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Ana Sayfa</a></li>
-        <li><a href="about.html">Hakkımda</a></li>
-        <li><a href="interests.html">İlgi Alanlarım</a></li>
-        <li><a href="contact.html">İletişim</a></li>
-      </ul>
-    </nav>
-  </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="about.html">Hakkımda</a></li>
+          <li><a href="interests.html">İlgi Alanlarım</a></li>
+          <li><a href="contact.html" class="active">İletişim</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section>
-      <h2>İletişim Bilgilerim</h2>
-      <ul>
-        <li>📩 E-posta: <a href="mailto:mcpaslann@gmail.com">mcpaslan</a></li>
-        <li>📱 Telefon: <a href="tel:+905551112233">+90 555 111 22 33</a></li>
-        <li>💻 GitHub: <a href="https://github.com/mcpaslan" target="_blank" rel="noopener">GitHub Profilim</a></li>
-        <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/mcpaslan" target="_blank" rel="noopener">LinkedIn Profilim</a></li>
-      </ul>
-    </section>
+    <main>
+      <section>
+        <h2>İletişim Bilgilerim</h2>
+        <ul>
+          <li>📩 E-posta: <a href="mailto:mcpaslann@gmail.com">mcpaslann@gmail.com</a></li>
+          <li>📱 Telefon: <a href="tel:+905551112233">+90 555 111 22 33</a></li>
+          <li>💻 GitHub: <a href="https://github.com/mcpaslan" target="_blank" rel="noopener">GitHub Profilim</a></li>
+          <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/mcpaslan" target="_blank" rel="noopener">LinkedIn Profilim</a></li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Sık Sorulan Sorular</h2>
+      <section>
+        <h2>Sık Sorulan Sorular</h2>
 
-      <h3>Mesajlara ne kadar sürede dönüş yapıyorsunuz?</h3>
-      <p>Genellikle 24 saat içinde e-posta yoluyla dönüş yapıyorum.</p>
+        <h3>Mesajlara ne kadar sürede dönüş yapıyorsunuz?</h3>
+        <p>Genellikle 24 saat içinde e-posta yoluyla dönüş yapıyorum.</p>
 
-      <h3>Projelerde iş birliğine açık mısınız?</h3>
-      <p>Hayır, şu anda değil.</p>
-    </section>
+        <h3>Projelerde iş birliğine açık mısınız?</h3>
+        <p>Hayır, şu anda değilim.</p>
+      </section>
 
-    <p><a href="index.html">← Ana sayfaya geri dön</a></p>
+      <div class="contact-container">
+        <h2>İletişim Formu</h2>
 
-    <hr />
-  </main>
+        <form action="#" method="post">
+          <label for="adsoyad">Ad Soyad:</label>
+          <input type="text" id="adsoyad" name="adsoyad" placeholder="Adınızı ve soyadınızı girin" />
 
-  <footer>
-    <p>© 2026 Web Programlama Dersi</p>
-  </footer>
+          <label for="eposta">E-posta:</label>
+          <input type="email" id="eposta" name="eposta" placeholder="ornek@mail.com" />
+
+          <label for="konu">Konu:</label>
+          <select id="konu" name="konu">
+            <option value="">Lütfen bir konu seçin</option>
+            <option value="is-teklifi">İş Teklifi</option>
+            <option value="soru">Soru</option>
+            <option value="geri-bildirim">Geri Bildirim</option>
+          </select>
+
+          <label for="mesaj">Mesaj:</label>
+          <textarea id="mesaj" name="mesaj" rows="6" placeholder="Mesajınızı buraya yazın"></textarea>
+
+          <input type="submit" value="Gönder" />
+        </form>
+      </div>
+
+      <p class="back-link"><a href="index.html">← Ana sayfaya geri dön</a></p>
+      <hr />
+    </main>
+
+    <footer>
+      <p>© 2026 Web Programlama Dersi</p>
+    </footer>
+  </div>
 
 </body>
 </html>
