@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,7 +25,9 @@
     }
 
     /* Grup seçici */
-    h1, h2, p {
+    h1,
+    h2,
+    p {
       margin-top: 0;
     }
 
@@ -40,6 +43,29 @@
       font-size: 22px;
       font-weight: bold;
       vertical-align: middle;
+    }
+
+    .logo img {
+      height: 32px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    .odev-btn {
+      display: inline-block;
+      background-color: #7da0d8;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      margin-top: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .odev-btn:hover {
+      background-color: #6088c2;
     }
 
     nav ul {
@@ -152,11 +178,12 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="container">
     <nav>
-      <div class="logo">CSS Temel Ödevi</div>
+      <div class="logo"><img src="socitek.png" alt="Logo" />CSS Temel Ödevi</div>
       <ul>
         <li><a href="index.html">Ana Sayfa</a></li>
         <li><a href="about.html">Hakkımda</a></li>
@@ -171,26 +198,28 @@
         Bu çalışmada CSS’in temel özellikleri uygulanmaktadır. Menü yapısı, kutu düzeni,
         metin biçimlendirme, margin, padding, border ve selector kullanımları örneklenmiştir.
       </p>
+      <a href="odev.html" class="odev-btn">Flexbox Ödevi Sayfası →</a>
     </header>
 
     <main>
       <section class="box content-box">
         <h2>Hoş Geldiniz</h2>
         <p>
-          Bu web sitesi, Web Programlama dersi kapsamında hazırlanmış <strong>örnek bir kişisel tanıtım sayfasıdır</strong>.
-        Amaç, HTML'in temel etiketlerini ve sayfa yapısını öğrenmektir.
+          Bu web sitesi, Web Programlama dersi kapsamında hazırlanmış <strong>örnek bir kişisel tanıtım
+            sayfasıdır</strong>.
+          Amaç, HTML'in temel etiketlerini ve sayfa yapısını öğrenmektir.
         </p>
       </section>
 
       <aside class="box side-box">
         <h2>Öğrenme Hedeflerim</h2>
         <p>
-          <ol>
-            <li>Görüntü işleme</li>
-            <li>Model Eğitimi</li>
-            <li>Modelin testi</li>
-            <li>Modelin optimizasyonu</li>
-          </ol>
+        <ol>
+          <li>Görüntü işleme</li>
+          <li>Model Eğitimi</li>
+          <li>Modelin testi</li>
+          <li>Modelin optimizasyonu</li>
+        </ol>
         </p>
         <p>
           Bu kapsamda kendi projelerimde bu teknikleri uygulayarak daha iyi sonuçlar elde etmeyi
@@ -205,4 +234,5 @@
   </div>
 
 </body>
+
 </html>
