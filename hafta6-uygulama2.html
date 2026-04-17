@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hafta 6 - Uygulama 2</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ece9ee;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .container {
+      width: 85%;
+      margin: 25px auto;
+      background-color: #f8f8fb;
+      border: 1px solid #d4d4d8;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    h1, h2, p {
+      margin-top: 0;
+    }
+
+    nav {
+      background-color: #f3f3f7;
+      padding: 18px 25px;
+      border-bottom: 2px solid #c9d7f0;
+    }
+
+    .logo {
+      display: inline-block;
+      font-size: 22px;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+
+    .logo img {
+      height: 32px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      float: right;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-left: 12px;
+    }
+
+    nav ul li a {
+      display: inline-block;
+      text-decoration: none;
+      color: #333;
+      padding: 10px 16px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #7da0d8;
+      color: white;
+    }
+
+    .active {
+      background-color: #7da0d8;
+      color: white;
+    }
+
+    /* Uygulama alanı */
+    main {
+      padding: 30px 25px;
+    }
+
+    main h1 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2a6496;
+      margin-bottom: 20px;
+    }
+
+    /* Kartlar yan yana */
+    .converter-wrapper {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .converter-card {
+      flex: 1;
+      min-width: 280px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 25px;
+      box-sizing: border-box;
+    }
+
+    .converter-card h2 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2a6496;
+      margin-bottom: 18px;
+    }
+
+    .converter-card label {
+      display: block;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 6px;
+    }
+
+    .converter-card input {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+    }
+
+    .converter-card input:focus {
+      outline: none;
+      border-color: #7da0d8;
+    }
+
+    .converter-card select {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+      background-color: #fff;
+    }
+
+    .converter-card select:focus {
+      outline: none;
+      border-color: #7da0d8;
+    }
+
+    .hesapla-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+      background-color: #2a8fd8;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-bottom: 15px;
+    }
+
+    .hesapla-btn:hover {
+      background-color: #1e7abf;
+    }
+
+    .sonuc-kutusu {
+      padding: 12px 18px;
+      background-color: #d4edda;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      display: none;
+    }
+
+    /* Ana sayfaya dön */
+    .back-btn {
+      display: inline-block;
+      background-color: #7da0d8;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      margin-top: 25px;
+      transition: background-color 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #6088c2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px;
+      background-color: #f1f1f5;
+      border-top: 1px solid #ddd;
+      font-size: 15px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <nav>
+      <div class="logo"><img src="socitek.png" alt="Logo" />CSS Temel Ödevi</div>
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="about.html">Hakkımda</a></li>
+        <li><a href="interests.html">İlgi Alanlarım</a></li>
+        <li><a href="contact.html">İletişim</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Birim Dönüştürücü</h1>
+      <div class="converter-card">
+
+        <label>Değer Giriniz:</label>
+        <input type="text" id="deger1" placeholder="Değer giriniz" />
+
+        <label>Dönüşüm Tipi:</label>
+        <select id="tip1">
+          <option value="metre-km">Metre -> Kilometre</option>
+          <option value="celsius-fahrenheit">Celsius -> Fahrenheit</option>
+          <option value="kg-gram">Kilogram -> Gram</option>
+        </select>
+
+        <button class="hesapla-btn" onclick="hesapla1()">Hesapla</button>
+
+        <div class="sonuc-kutusu" id="sonuc1"></div>
+      </div>
+
+      <a href="index.html" class="back-btn">← Ana Sayfaya Dön</a>
+    </main>
+
+    <footer>
+      © 2026 CSS Temel Örnek. Bu sayfa basit bir HTML + CSS + JavaScript alıştırmasıdır.
+    </footer>
+  </div>
+
+  <script>
+    function donustur(deger, tip) {
+      var sonuc;
+      switch (tip) {
+        case "metre-km":
+          sonuc = deger / 1000;
+          break;
+        case "celsius-fahrenheit":
+          sonuc = (deger * 9 / 5) + 32;
+          break;
+        case "kg-gram":
+          sonuc = deger * 1000;
+          break;
+      }
+      return sonuc;
+    }
+
+    function formatSonuc(sayi) {
+      // Türkçe sayı formatı: binlik ayırıcı nokta
+      return sayi.toLocaleString("tr-TR");
+    }
+
+    function hesapla1() {
+      var deger = parseFloat(document.getElementById("deger1").value);
+      var tip = document.getElementById("tip1").value;
+
+      if (isNaN(deger)) {
+        alert("Lütfen geçerli bir değer giriniz.");
+        return;
+      }
+
+      var sonuc = donustur(deger, tip);
+      var sonucDiv = document.getElementById("sonuc1");
+      sonucDiv.textContent = "Sonuç: " + formatSonuc(sonuc);
+      sonucDiv.style.display = "block";
+    }
+
+    function hesapla2() {
+      var deger = parseFloat(document.getElementById("deger2").value);
+      var tip = document.getElementById("tip2").value;
+
+      if (isNaN(deger)) {
+        alert("Lütfen geçerli bir değer giriniz.");
+        return;
+      }
+
+      var sonuc = donustur(deger, tip);
+      var sonucDiv = document.getElementById("sonuc2");
+      sonucDiv.textContent = "Sonuç: " + formatSonuc(sonuc);
+      sonucDiv.style.display = "block";
+    }
+  </script>
+
+</body>
+
+</html>

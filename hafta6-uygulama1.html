@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hafta 6 - Uygulama 1</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ece9ee;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .container {
+      width: 85%;
+      margin: 25px auto;
+      background-color: #f8f8fb;
+      border: 1px solid #d4d4d8;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    h1, h2, p {
+      margin-top: 0;
+    }
+
+    nav {
+      background-color: #f3f3f7;
+      padding: 18px 25px;
+      border-bottom: 2px solid #c9d7f0;
+    }
+
+    .logo {
+      display: inline-block;
+      font-size: 22px;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+
+    .logo img {
+      height: 32px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      float: right;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-left: 12px;
+    }
+
+    nav ul li a {
+      display: inline-block;
+      text-decoration: none;
+      color: #333;
+      padding: 10px 16px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #7da0d8;
+      color: white;
+    }
+
+    .active {
+      background-color: #7da0d8;
+      color: white;
+    }
+
+    /* Uygulama alanı */
+    main {
+      padding: 30px 25px;
+    }
+
+    main h1 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2f2f38;
+      margin-bottom: 20px;
+    }
+
+    /* Form stilleri */
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group input {
+      width: 100%;
+      max-width: 600px;
+      padding: 10px 12px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #7da0d8;
+    }
+
+    .hesapla-btn {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      padding: 10px;
+      font-size: 15px;
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .hesapla-btn:hover {
+      background-color: #e8e8e8;
+    }
+
+    /* Sonuç kutusu */
+    .sonuc-kutusu {
+      display: none;
+      margin-top: 25px;
+      padding: 15px 20px;
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      max-width: 600px;
+    }
+
+    .sonuc-kutusu h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 0 8px 0;
+    }
+
+    .sonuc-kutusu p {
+      font-size: 15px;
+      margin: 3px 0;
+      color: #333;
+    }
+
+    /* Ana sayfaya dön */
+    .back-btn {
+      display: inline-block;
+      background-color: #7da0d8;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      margin-top: 25px;
+      transition: background-color 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #6088c2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px;
+      background-color: #f1f1f5;
+      border-top: 1px solid #ddd;
+      font-size: 15px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <nav>
+      <div class="logo"><img src="socitek.png" alt="Logo" />CSS Temel Ödevi</div>
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="about.html">Hakkımda</a></li>
+        <li><a href="interests.html">İlgi Alanlarım</a></li>
+        <li><a href="contact.html">İletişim</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Öğrenci Not Hesaplama</h1>
+
+      <div class="form-group">
+        <input type="text" id="adSoyad" placeholder="Ad Soyad" />
+      </div>
+      <div class="form-group">
+        <input type="text" id="vizeNotu" placeholder="Vize Notu" />
+      </div>
+      <div class="form-group">
+        <input type="text" id="finalNotu" placeholder="Final Notu" />
+      </div>
+
+      <button class="hesapla-btn" onclick="hesapla()">Hesapla</button>
+
+      <div class="sonuc-kutusu" id="sonucKutusu">
+        <h3 id="sonucAd"></h3>
+        <p id="sonucOrtalama"></p>
+        <p id="sonucHarf"></p>
+        <p id="sonucDurum"></p>
+      </div>
+
+      <a href="index.html" class="back-btn">← Ana Sayfaya Dön</a>
+    </main>
+
+    <footer>
+      © 2026 CSS Temel Örnek. Bu sayfa basit bir HTML + CSS + JavaScript alıştırmasıdır.
+    </footer>
+  </div>
+
+  <script>
+    function hesapla() {
+      var adSoyad = document.getElementById("adSoyad").value;
+      var vize = parseFloat(document.getElementById("vizeNotu").value);
+      var final_ = parseFloat(document.getElementById("finalNotu").value);
+
+      if (adSoyad === "" || isNaN(vize) || isNaN(final_)) {
+        alert("Lütfen tüm alanları doldurunuz.");
+        return;
+      }
+
+      // Ortalama hesaplama: Vize %40, Final %60
+      var ortalama = (vize * 0.40) + (final_ * 0.60);
+
+      // Harf notu belirleme
+      var harfNotu;
+      if (ortalama >= 90) {
+        harfNotu = "AA";
+      } else if (ortalama >= 80) {
+        harfNotu = "BA";
+      } else if (ortalama >= 70) {
+        harfNotu = "BB";
+      } else if (ortalama >= 60) {
+        harfNotu = "CB";
+      } else if (ortalama >= 50) {
+        harfNotu = "CC";
+      } else if (ortalama >= 40) {
+        harfNotu = "DC";
+      } else if (ortalama >= 30) {
+        harfNotu = "DD";
+      } else {
+        harfNotu = "FF";
+      }
+
+      // Geçti / Kaldı durumu
+      var durum;
+      if (ortalama >= 50) {
+        durum = "Geçti";
+      } else {
+        durum = "Kaldı";
+      }
+
+      // Sonuçları göster
+      document.getElementById("sonucAd").textContent = adSoyad;
+      document.getElementById("sonucOrtalama").textContent = "Ortalama: " + ortalama.toFixed(2);
+      document.getElementById("sonucHarf").textContent = "Harf Notu: " + harfNotu;
+      document.getElementById("sonucDurum").textContent = "Durum: " + durum;
+      document.getElementById("sonucKutusu").style.display = "block";
+    }
+  </script>
+
+</body>
+
+</html>
